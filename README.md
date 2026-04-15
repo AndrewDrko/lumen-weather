@@ -38,15 +38,15 @@ Diseñada con enfoque **mobile first** y experiencia de usuario limpia, Lumen bu
 
 ### 🌦️ Información del clima
 
-![Weather](./screenshots/search-weather.gif)
+![Weather](./src/screenshots/search-weather.gif)
 
 ### 🔍 Búsqueda y guardado de ciudades
 
-![Search](./screenshots/save-location.gif)
+![Search](./src/screenshots/save-locations.gif)
 
 ### ⚙️ Configuración
 
-![Settings](./screenshots/settings.gif)
+![Settings](./src/screenshots/settings.gif)
 
 ---
 
