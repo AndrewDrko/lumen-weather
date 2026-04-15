@@ -1,73 +1,61 @@
-# React + TypeScript + Vite
+# Lumen Weather
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Lumen Weather** es una app del clima moderna, rápida y visualmente cuidada, creada con **React + TypeScript + Vite**. Permite buscar el pronóstico de cualquier lugar, guardar ubicaciones favoritas y personalizar la forma en que ves la información para adaptarla a tu estilo.
 
-Currently, two official plugins are available:
+Diseñada con enfoque **mobile first** y experiencia de usuario limpia, Lumen busca hacer que consultar el clima se sienta simple, útil y agradable.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## ✨ Características
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🔎 Búsqueda de clima por ciudad o ubicación
+- 📍 Guardado de ubicaciones favoritas
+- 🌡️ Cambio de unidades de temperatura: Celsius / Fahrenheit
+- 💨 Unidades personalizables para velocidad del viento
+- 🧭 Unidades personalizables para presión atmosférica
+- ⏰ Formato de hora configurable: 12h / 24h
+- 🌙 Modo claro y modo oscuro
+- 📱 Diseño responsive (EN CURSO)
+- ⚡ Interfaz rápida y limpia
+- 🎨 Enfoque visual moderno
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tecnologías usadas
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **React**
+- **TypeScript**
+- **Vite**
+- **CSS / Responsive Design**
+- **Git / GitHub**
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🌐 APIs utilizadas
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### OpenWeather
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Se utiliza para obtener:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- clima actual
+- pronóstico
+- temperatura
+- humedad
+- viento
+- presión atmosférica
+
+### Geoapify
+
+Se utiliza para:
+
+- geocodificación
+- convertir nombres de lugares en coordenadas
+- mejorar la búsqueda de ubicaciones
+
+### Unsplash
+
+Se utiliza para:
+
+- imágenes de fondo
+- mejorar la presentación visual
+- dar una experiencia más inmersiva según el clima o la ubicación
