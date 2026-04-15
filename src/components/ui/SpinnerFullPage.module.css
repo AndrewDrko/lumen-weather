@@ -1,0 +1,13 @@
+.container {
+  height: 100vh;
+  position: relative;
+  width: 100%;
+  background-color: var(--primary-2);
+}
+
+.spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
