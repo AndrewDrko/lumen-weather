@@ -14,25 +14,38 @@ function LocationProvider({ children }: { children: React.ReactNode }) {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    if (!location.trim()) {
+      setDataLocations(null);
+      return;
+    }
+
+    const controller = new AbortController();
+
     async function searchLocations() {
       try {
-        if (!location || location === "") return;
         setLoading(true);
+
         const res = await fetch(
           `https://api.geoapify.com/v1/geocode/search?apiKey=${API_KEY}&name=${location}&type=city`,
+          { signal: controller.signal },
         );
+
         const data = await res.json();
         setDataLocations(data);
       } catch (error) {
-        console.error(error);
+        if ((error as Error).name === "AbortError") return;
         setError("No se pudo obtener la locación");
       } finally {
         setLoading(false);
-        setError(null);
       }
     }
+
     searchLocations();
-  }, [API_KEY, location]);
+
+    return () => {
+      controller.abort();
+    };
+  }, [location, API_KEY]);
 
   return (
     <LocationContext.Provider

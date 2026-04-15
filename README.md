@@ -27,7 +27,26 @@ Diseñada con enfoque **mobile first** y experiencia de usuario limpia, Lumen bu
 - **TypeScript**
 - **Vite**
 - **CSS / Responsive Design**
+- **Context API**
+- **Fetch API**
+- **React Router**
 - **Git / GitHub**
+
+---
+
+## 🖼️ Vista de la aplicación
+
+### 🌦️ Información del clima
+
+![Weather](./screenshots/search-weather.gif)
+
+### 🔍 Búsqueda y guardado de ciudades
+
+![Search](./screenshots/save-location.gif)
+
+### ⚙️ Configuración
+
+![Settings](./screenshots/settings.gif)
 
 ---
 

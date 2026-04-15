@@ -9,11 +9,16 @@ export default function useSearch() {
   const { setLocation: setSearchLocation, setDataLocations } = useGeoLocation();
 
   useEffect(() => {
-    if (!location.trim()) return;
+    const query = location.trim();
+
+    if (!query) {
+      setSearchLocation("");
+      return;
+    }
 
     const timeout = setTimeout(() => {
-      setSearchLocation(location.trim());
-    }, 150);
+      setSearchLocation(query);
+    }, 300);
 
     return () => clearTimeout(timeout);
   }, [location, setSearchLocation]);
