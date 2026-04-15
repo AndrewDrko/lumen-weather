@@ -1,0 +1,28 @@
+.container {
+  position: absolute;
+  list-style: none;
+  top: 0;
+  right: 50%;
+  transform: translate(50%, 60px);
+  width: 90%;
+  overflow-y: auto;
+  z-index: 20;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--neutral-2);
+  border-radius: 16px;
+}
+
+.spinner {
+  align-self: center;
+  margin: auto 0;
+}
+
+.container .altContainer {
+  display: flex;
+  justify-content: center;
+  height: 40vh;
+  width: 100%;
+}

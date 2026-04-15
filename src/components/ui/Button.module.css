@@ -1,0 +1,39 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.button svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.button:hover {
+  transform: scale(108%);
+}
+
+.circle {
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+}
+
+.primary {
+  background-color: var(--primary-9);
+  color: var(--primary-2);
+}
+
+.secondary {
+  background-color: #f7c799;
+  color: #662b00;
+}
+
+.tertiary {
+  background-color: var(--tertiary-2);
+  color: var(--tertiary-9);
+}

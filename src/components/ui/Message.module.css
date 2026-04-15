@@ -1,0 +1,24 @@
+.messageContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  align-items: center;
+  padding: 0 2.4rem;
+  text-align: center;
+}
+
+.messageContainer svg {
+  height: 9.2rem;
+  width: 9.2rem;
+  color: var(--neutral-10);
+}
+
+.messageContainer h2 {
+  font-size: 3.2rem;
+  color: var(--primary-9);
+}
+
+.messageContainer span {
+  font-size: 2rem;
+  color: var(--neutral-8);
+}

@@ -1,0 +1,42 @@
+.card {
+  margin: 0 2rem;
+}
+
+.gridCards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.8rem;
+  margin: 0 2rem;
+}
+
+.gridCards .card {
+  margin: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 52, 107, 0.705),
+    rgba(0, 80, 160, 0.192)
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-radius: 20px;
+
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.message {
+  margin: auto 0;
+}
+
+.spinner {
+  align-self: center;
+  margin: auto 0;
+}
+
+:global([data-theme="light"]) .gridCards .card {
+  background: var(--primary-1);
+  box-shadow: var(--standard-shadow);
+  border: 1px solid var(--neutral-3);
+}

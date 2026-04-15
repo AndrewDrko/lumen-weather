@@ -1,0 +1,85 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  width: 100%;
+  /* max-width: 50%; */
+}
+
+.container.open {
+  background-color: var(--secondary-1);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
+  border: solid 1px var(--secondary-3);
+}
+
+.inputWrapper {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  overflow: hidden;
+}
+
+.inputWrapper form {
+  width: 100%;
+}
+
+/* input */
+.input {
+  flex: 1;
+  color: var(--secondary-8);
+  border-radius: inherit;
+  font-size: 2.4rem;
+  transform: scaleX(0);
+  transform-origin: right;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  background-color: inherit;
+  max-width: 100%;
+  transition: all 0.3s ease;
+  width: 0;
+  opacity: 0;
+}
+
+.input.open {
+  width: 100%;
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.input::placeholder {
+  color: var(--secondary-6);
+}
+
+.icon {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--secondary-6);
+  margin-left: 0.5rem; /* espacio entre input y icono */
+  transition: color 0.3s;
+}
+
+.icon:hover {
+  color: var(--secondary-8);
+}
+
+.icon svg {
+  width: 3rem;
+  height: 3rem;
+  filter: drop-shadow(4px 4px 6px rgba(0, 0, 0, 0.5));
+}
+
+.searchSvg {
+  width: 3rem;
+  height: 3rem;
+  align-self: center;
+  color: var(--secondary-6);
+}
+
+:global([data-theme="light"]) .icon svg {
+  filter: none;
+}

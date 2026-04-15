@@ -1,0 +1,20 @@
+.settingRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.6rem 2.4rem;
+  border-bottom: 1px solid var(--neutral-3);
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.label svg {
+  color: var(--primary-7);
+  width: 2rem;
+  height: 2rem;
+}

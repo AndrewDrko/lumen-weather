@@ -1,0 +1,67 @@
+.pageContainer {
+  background: linear-gradient(0deg, rgb(29, 29, 29) 0%, rgb(0, 0, 0) 100%);
+  gap: 7.2rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  margin: 0 2.4rem;
+}
+
+.titleLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.titleLabel svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+
+  background-color: var(--neutral-2);
+}
+
+.card div:last-child {
+  border-bottom: none;
+}
+
+.resetButton {
+  margin-top: 5.2rem;
+  padding: 1.6rem 1rem;
+  border-radius: 9px;
+  font-weight: 600;
+  width: 70%;
+  align-self: center;
+}
+
+.resetButton span {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+footer h2 {
+  font-size: 2.4rem;
+}
+
+footer span {
+  font-size: 1.6rem;
+  color: var(--neutral-8);
+}

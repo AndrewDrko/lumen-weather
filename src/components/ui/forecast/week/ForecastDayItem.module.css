@@ -1,0 +1,26 @@
+.itemContainer {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 2fr;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  width: 100%;
+}
+
+.icon {
+  justify-self: self-start;
+}
+
+.dayLabel {
+  font-weight: 600;
+}
+
+.averageData {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.rangeSlider {
+  width: 15rem;
+}

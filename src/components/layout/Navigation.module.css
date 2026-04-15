@@ -1,0 +1,36 @@
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav {
+  font-size: 1.8rem;
+  width: 100%;
+
+  background-color: var(--neutral-1);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  padding: 3.2rem 5.4rem;
+}
+
+nav li {
+  width: 40vw;
+  user-select: none;
+}
+
+.navBox {
+  width: 100%;
+  position: fixed;
+  bottom: env(safe-area-inset-bottom);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+:global([data-theme="light"]) nav {
+  background-color: var(--neutral-2);
+  border: 1px solid var(--neutral-4);
+}

@@ -1,0 +1,67 @@
+.locationItem {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  width: 100%;
+  padding: 2.8rem 4.2rem 2.8rem 3rem;
+  border-radius: 19px;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.3s;
+  box-shadow: var(--standard-shadow);
+}
+
+.locationItem:hover {
+  transform: scale(105%);
+}
+
+.locationItem span {
+  color: #f3f0f2;
+}
+
+.mainInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.locationItem h1 {
+  color: #d6e3ff;
+  font-size: 3.2rem;
+}
+
+.time {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.temp {
+  font-size: 5.2rem;
+  justify-self: flex-end;
+  font-weight: 700;
+}
+
+.icon {
+  filter: brightness(9%) invert(1);
+  justify-self: flex-end;
+  transform: translate(0, -10px);
+}
+
+.description {
+  font-size: 1.8rem;
+  font-weight: 700;
+  align-self: flex-end;
+  text-transform: capitalize;
+}
+
+.buttonRemove {
+  position: absolute;
+  right: 9px;
+  top: 12px;
+  opacity: 80%;
+}
+
+:global([data-theme="light"]) .icon img {
+  background-color: transparent;
+}

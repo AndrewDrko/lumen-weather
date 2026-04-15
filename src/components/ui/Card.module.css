@@ -1,0 +1,16 @@
+.cardContainer {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  background-color: var(--primary-1);
+  border-radius: 30px;
+  padding: 0.8rem 2.4rem;
+  box-shadow: var(--standard-shadow);
+  border: 1px solid rgba(255, 255, 255, 0.082);
+
+  /* overflow-x: auto; */
+}
+
+:global([data-theme="light"]) .cardContainer {
+  border: 1px solid var(--neutral-3);
+}
