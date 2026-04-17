@@ -130,7 +130,11 @@ function SettingsPage() {
         </section>
 
         <footer>
-          <img src="../../../public/favicon.png" alt="Lumen Weather Logo" />
+          <img
+            className={styles.logo}
+            src="/lumen-logo.png"
+            alt="Lumen Weather Logo"
+          />
           <h2>Lumen Weather V1.1.0</h2>
           <span>&copy; Andrew Zaragoza</span>
           <span>Powered by OpenWeather, Geoapify and Unsplash</span>

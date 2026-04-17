@@ -49,6 +49,11 @@
   gap: 1rem;
 }
 
+.logo {
+  width: 4.8rem;
+  height: 4.8rem;
+}
+
 footer {
   display: flex;
   flex-direction: column;
