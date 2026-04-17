@@ -6,10 +6,15 @@ import { useEffect, useState } from "react";
 import { loadLocations } from "../../utils/helpers";
 import Message from "../ui/Message";
 import { MdAddLocationAlt } from "react-icons/md";
+import { FaPlus } from "react-icons/fa6";
+import Button from "../ui/Button";
+import { useSearchContext } from "../../contexts/search/useSearchContext";
 
 function LocationsPage() {
   const [query, setQuery] = useState("");
   const [locations, setLocations] = useState(loadLocations());
+
+  const { setIsOpen } = useSearchContext();
 
   const filteredLocations = locations.filter((loc) =>
     loc.address1.toLowerCase().includes(query.toLowerCase()),
@@ -53,10 +58,14 @@ function LocationsPage() {
           messageDescription="Haz clic en el botón + para agregar nuevas locaciones"
         />
       ) : (
-        <>
-          <LocationList locations={filteredLocations} />
-        </>
+        <LocationList locations={filteredLocations} />
       )}
+      <div className={styles.addLocation}>
+        <Button onClick={() => setIsOpen(true)} shape="circle">
+          <FaPlus />
+        </Button>
+        <span>Agregar Nueva Locación</span>
+      </div>
     </PageContainer>
   );
 }
