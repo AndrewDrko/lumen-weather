@@ -38,19 +38,17 @@ function ForecastDayList() {
         acc[day] = {
           day,
           temp: 0,
-          tempMax: -Infinity, // 🔥 CAMBIO
-          tempMin: Infinity, // 🔥 CAMBIO
+          tempMax: -Infinity,
+          tempMin: Infinity,
           count: 0,
           icons: {},
         };
       }
 
-      // promedio (esto sí se queda)
       acc[day].temp += cur.main.temp;
       acc[day].count++;
 
-      // 🔥 AQUÍ ESTÁ LA CLAVE (min/max reales)
-      acc[day].tempMax = Math.max(acc[day].tempMax, cur.main.temp_max);
+      //(min/max reales)
       acc[day].tempMin = Math.min(acc[day].tempMin, cur.main.temp_min);
 
       // iconos
@@ -62,8 +60,8 @@ function ForecastDayList() {
   ).map((day) => ({
     day: day.day,
     avgTemp: Math.round(day.temp / day.count),
-    maxTemp: Math.round(day.tempMax), // 🔥 ya no es promedio
-    minTemp: Math.round(day.tempMin), // 🔥 ya no es promedio
+    maxTemp: Math.round(day.tempMax),
+    minTemp: Math.round(day.tempMin),
     icon: Object.entries(day.icons).reduce((a, b) => (b[1] > a[1] ? b : a))[0],
   }));
 

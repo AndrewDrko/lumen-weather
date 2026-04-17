@@ -60,7 +60,7 @@ type WeatherType = "clouds" | "humidity" | "visibility" | "wind";
 
 export function getWeatherLabel(type: WeatherType, value: number): string {
   switch (type) {
-    // ☁️ NUBES
+    // NUBES
     case "clouds":
       if (value < 10) return "Despejado";
       if (value < 30) return "Poco nublado";
@@ -68,21 +68,21 @@ export function getWeatherLabel(type: WeatherType, value: number): string {
       if (value < 85) return "Mayormente nublado";
       return "Nublado";
 
-    // 💧 HUMEDAD
+    // HUMEDAD
     case "humidity":
       if (value < 30) return "Humedad baja";
       if (value < 60) return "Humedad moderada";
       if (value < 80) return "Humedad alta";
       return "Humedad muy alta";
 
-    // 👀 VISIBILIDAD (millas)
+    //VISIBILIDAD (millas)
     case "visibility":
       if (value >= 10) return "Excelente visibilidad";
       if (value > 6) return "Buena visibilidad";
       if (value > 3) return "Visibilidad moderada";
       return "Baja visibilidad";
 
-    // 🌬️ VIENTO (km/h)
+    // VIENTO (km/h)
     case "wind":
       if (value < 5) return "Calma";
       if (value < 15) return "Brisa ligera";
@@ -193,14 +193,12 @@ export function deleteLocation(place_id: string) {
 
     const currentLocations: Location[] = JSON.parse(store);
 
-    // Filtramos el location que no tenga el place_id
     const updatedLocations = currentLocations.filter(
       (loc) => loc.place_id !== place_id,
     );
 
     localStorage.setItem("locations", JSON.stringify(updatedLocations));
 
-    // Disparamos el evento para actualizar UI si alguien escucha
     window.dispatchEvent(new Event("locationsUpdated"));
   } catch (err) {
     console.error("Error deleting location", err);

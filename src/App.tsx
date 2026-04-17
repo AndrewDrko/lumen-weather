@@ -1,8 +1,5 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router";
-// import WeatherPage from "./components/pages/WeatherPage";
 import MainLayout from "./components/layout/MainLayout";
-// import LocationsPage from "./components/pages/LocationsPage";
-// import SettingsPage from "./components/pages/SettingsPage";
 import { LocationProvider } from "./contexts/locations/LocationContext";
 import { WeatherProvider } from "./contexts/weather/WeatherContext";
 import { SearchProvider } from "./contexts/search/SearchContext";

@@ -32,7 +32,6 @@ function MiniCard({
           <FaArrowUp
             style={{
               transform: `rotate(${windDegrees + 180}deg)`,
-              // transition: "transform 0.4s ease",
             }}
           />
           <span className={styles.windDegreesIndicator}>

@@ -62,10 +62,7 @@ export type FullData = {
 
 export interface WeatherContextType {
   data: FullData | null;
-  // city: string;
-  // coords: { lat: number; lon: number } | null;
-  // setCity: (city: string) => void;
-  // setCoords: Dispatch<SetStateAction<{ lat: number; lon: number } | null>>;
+
   error: string | null;
   loading: boolean;
 }
