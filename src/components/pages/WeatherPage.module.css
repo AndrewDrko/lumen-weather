@@ -66,6 +66,11 @@
   .tempIndicator {
     align-self: center;
   }
+
+  .spinner {
+    grid-column: 1/-1;
+    justify-self: center;
+  }
 }
 
 @media (min-width: 84em) {
