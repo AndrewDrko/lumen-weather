@@ -3,9 +3,9 @@ import { HiCloud } from "react-icons/hi";
 import { HiCog6Tooth, HiMiniListBullet } from "react-icons/hi2";
 import NavElement from "../ui/NavElement";
 
-function Navigation() {
+function Navigation({ className = "" }: { className?: string }) {
   return (
-    <div className={`${styles.navBox}`}>
+    <div className={`${styles.navBox} ${className}`}>
       <nav>
         <ul>
           <li>

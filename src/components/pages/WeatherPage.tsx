@@ -39,8 +39,6 @@ function WeatherPage() {
     },
   };
 
-  console.log(data);
-
   if (loading)
     return (
       <PageContainer>
@@ -62,7 +60,7 @@ function WeatherPage() {
 
   if (!data)
     return (
-      <PageContainer>
+      <PageContainer className={styles.pageContainer}>
         <Message
           className={styles.message}
           messageHeader="No hay una locación seleccionada..."
@@ -75,6 +73,7 @@ function WeatherPage() {
   return (
     <PageContainer>
       <TemperatureIndicator
+        className={styles.tempIndicator}
         temperature={tempUnitConverter(
           data.weather.main.temp,
           preferences.tempUnit,
@@ -82,11 +81,11 @@ function WeatherPage() {
         coord={data.weather.coord}
         weatherState={data.weather.weather[0].description}
       />
-      <Card className={styles.card}>
+      <Card className={`${styles.card} ${styles.dayCard}`}>
         <DayForecast />
       </Card>
 
-      <Card className={styles.card}>
+      <Card className={`${styles.card} ${styles.weekCard}`}>
         <WeekForecast />
       </Card>
 

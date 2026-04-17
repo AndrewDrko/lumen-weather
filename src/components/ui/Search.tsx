@@ -31,7 +31,9 @@ function Search({
       <div
         className={`${styles.container} ${isOpen ? styles.open : ""} ${className}`}
       >
-        <div className={styles.inputWrapper}>
+        <div
+          className={`${styles.inputWrapper} ${isOpen ? styles.wrapperOpen : ""}`}
+        >
           <form onSubmit={onSubmit}>
             <input
               ref={inputRef}

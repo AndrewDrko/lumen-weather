@@ -40,3 +40,42 @@
   box-shadow: var(--standard-shadow);
   border: 1px solid var(--neutral-3);
 }
+
+@media (min-width: 75em) {
+  .gridCards {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column: 1 / -1;
+  }
+
+  .weekCard {
+    grid-column: 2 / -1;
+    grid-row: 1 / 2;
+  }
+
+  .dayCard {
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+  }
+
+  .message {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (min-width: 75em) {
+  .tempIndicator {
+    align-self: center;
+  }
+}
+
+@media (min-width: 84em) {
+  .gridCards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 90em) {
+  .gridCards {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

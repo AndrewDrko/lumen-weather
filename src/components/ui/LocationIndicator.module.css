@@ -5,12 +5,12 @@
   font-size: 2.4rem;
   color: var(--neutral-9);
 
-  position: absolute; /* 🔥 clave */
+  position: absolute;
   top: 45%;
   left: 10;
 
-  opacity: 1;
   transform: translateY(-10px);
+  opacity: 1;
   pointer-events: none;
   transition: all 0.3s;
 }

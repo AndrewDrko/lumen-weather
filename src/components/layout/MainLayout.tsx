@@ -3,6 +3,7 @@ import Navigation from "./Navigation";
 
 import styles from "./MainLayout.module.css";
 import Header from "./Header";
+import Overlay from "../ui/Overlay";
 
 function MainLayout() {
   return (
@@ -11,7 +12,8 @@ function MainLayout() {
       <main>
         <Outlet />
       </main>
-      <Navigation />
+      <Navigation className={styles.navigation} />
+      <Overlay />
     </div>
   );
 }

@@ -7,3 +7,31 @@
 main {
   flex: 1;
 }
+
+@media (min-width: 75em) {
+  .mainLayout {
+    display: grid;
+
+    grid-template-columns: 45rem 1fr;
+    grid-template-rows: auto 1fr;
+
+    grid-template-areas:
+      "sidebar head"
+      "sidebar content";
+  }
+
+  .navigation {
+    grid-area: sidebar;
+    position: sticky;
+    top: 0;
+    border-right: 1px solid var(--neutral-2);
+  }
+
+  .header {
+    grid-area: head;
+  }
+
+  main {
+    grid-area: content;
+  }
+}

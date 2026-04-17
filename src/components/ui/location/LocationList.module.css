@@ -4,6 +4,53 @@
   gap: 3.2rem;
   align-items: center;
   margin: 0 4rem;
-
   list-style: none;
+
+  grid-column: 1 / -1;
+}
+
+.addLocation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+  padding: 2.8rem 4.2rem 2.8rem 3rem;
+  border-radius: 19px;
+  border: 2px dotted var(--primary-9);
+  /* margin: 0 3.2rem; */
+  transition: backgraound-color 0.3s;
+  width: 100%;
+}
+
+.addLocation:hover {
+  background-color: var(--neutral-3);
+}
+
+.addLocation span {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.addLocation button {
+  width: 5.8rem;
+  height: 5.8rem;
+}
+
+.addLocation svg {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+@media (min-width: 59em) {
+  .listContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 75em) {
+  .listContainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

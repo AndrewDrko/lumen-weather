@@ -7,15 +7,17 @@ interface TemperatureIndicatorType {
     lon: number;
   };
   weatherState: string;
+  className?: string;
 }
 
 function TemperatureIndicator({
+  className = "",
   temperature,
   coord,
   weatherState,
 }: TemperatureIndicatorType) {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${className}`}>
       <span className={`${styles.secondaryLabel} ${styles.weatherState}`}>
         {weatherState}
       </span>

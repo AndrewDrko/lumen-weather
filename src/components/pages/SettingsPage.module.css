@@ -66,3 +66,13 @@ footer span {
   font-size: 1.6rem;
   color: var(--neutral-8);
 }
+
+@media (min-width: 75em) {
+  footer {
+    grid-column: 1 / -1;
+  }
+
+  .resetButton {
+    width: 100%;
+  }
+}

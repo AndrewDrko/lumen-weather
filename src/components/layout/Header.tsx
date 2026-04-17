@@ -52,29 +52,28 @@ function Header() {
       : `${data.weather.name}, ${data.weather.sys.country}`;
 
   return (
-    <div className={`${isOpen ? styles.overlay : null}`}>
-      <header
-        className={
-          scrolled ? `${styles.header} ${styles.scrolled}` : styles.header
-        }
-      >
-        <LocationIndicator text={locationText} isVisible={!isOpen} />
-        <Search
-          isOpen={isOpen}
-          value={location}
-          onChange={setLocation}
-          onSubmit={handleSubmit}
-          onToggle={toggleSearch}
-          onClose={closeSearch}
-          inputRef={inputRef}
-          placeholderText="Buscar locación..."
-          type="dropside"
-        />
-        {isOpen && dataLocations?.features ? (
-          <SearchDropdown locationsData={dataLocations.features} />
-        ) : null}
-      </header>
-    </div>
+    <header
+      className={
+        scrolled ? `${styles.header} ${styles.scrolled}` : styles.header
+      }
+    >
+      <LocationIndicator text={locationText} isVisible={!isOpen} />
+      <Search
+        className={styles.search}
+        isOpen={isOpen}
+        value={location}
+        onChange={setLocation}
+        onSubmit={handleSubmit}
+        onToggle={toggleSearch}
+        onClose={closeSearch}
+        inputRef={inputRef}
+        placeholderText="Buscar locación..."
+        type="dropside"
+      />
+      {isOpen && dataLocations?.features ? (
+        <SearchDropdown locationsData={dataLocations.features} />
+      ) : null}
+    </header>
   );
 }
 

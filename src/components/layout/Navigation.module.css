@@ -34,3 +34,38 @@ nav li {
   background-color: var(--neutral-2);
   border: 1px solid var(--neutral-4);
 }
+
+@media (min-width: 75em) {
+  .navBox {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 7.2rem;
+    height: 100vh; /* 🔥 clave */
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* 🔥 ocupa todo */
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* 🔥 en vez de height */
+  }
+
+  nav li {
+    width: 100%;
+  }
+
+  nav li:last-child {
+    margin-top: auto;
+  }
+
+  :global([data-theme="light"]) nav {
+    background-color: inherit;
+    border: none;
+  }
+}

@@ -44,3 +44,13 @@
 .message {
   margin: auto 0;
 }
+
+@media (min-width: 75em) {
+  .search {
+    grid-column: 1 / -1;
+  }
+
+  .message {
+    grid-column: 1 / -1;
+  }
+}

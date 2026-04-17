@@ -49,7 +49,6 @@ function LocationItem({ city, lat, lon, place_id }: LocationItemTypes) {
           `https://api.unsplash.com/search/photos?query=${encodeURIComponent(city)}&client_id=${API_KEY}&orientation=landscape&per_page=1`,
         );
         const data = await res.json();
-        console.log(data);
         setImg(data.results[0].urls.small);
       } catch (error) {
         console.error(error);

@@ -1,5 +1,4 @@
-.linkNav:link,
-.linkNav:visited {
+.linkNav {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,4 +36,17 @@
 :global([data-theme="light"]) .selected {
   background-color: var(--primary-2);
   color: var(--primary-6);
+  border-right: none;
+}
+
+@media (min-width: 75em) {
+  .linkNav {
+    flex-direction: row;
+    gap: 1.2rem;
+    font-size: 2rem;
+  }
+
+  .selected {
+    border-right: 2px solid var(--primary-8);
+  }
 }

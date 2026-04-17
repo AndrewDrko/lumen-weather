@@ -2,7 +2,8 @@
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
-
+  gap: 1.2rem;
+  height: 100%;
   width: 100%;
   padding: 2.8rem 4.2rem 2.8rem 3rem;
   border-radius: 19px;
@@ -39,12 +40,14 @@
 .temp {
   font-size: 5.2rem;
   justify-self: flex-end;
+  align-self: end;
   font-weight: 700;
 }
 
 .icon {
   filter: brightness(9%) invert(1);
   justify-self: flex-end;
+  align-self: start;
   transform: translate(0, -10px);
 }
 
@@ -64,4 +67,7 @@
 
 :global([data-theme="light"]) .icon img {
   background-color: transparent;
+}
+
+@media (max-width: 75em) {
 }
