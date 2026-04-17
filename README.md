@@ -15,7 +15,7 @@ Diseñada con enfoque **mobile first** y experiencia de usuario limpia, Lumen bu
 - 🧭 Unidades personalizables para presión atmosférica
 - ⏰ Formato de hora configurable: 12h / 24h
 - 🌙 Modo claro y modo oscuro
-- 📱 Diseño responsive (EN CURSO)
+- 📱 Diseño responsive
 - ⚡ Interfaz rápida y limpia
 - 🎨 Enfoque visual moderno
 
