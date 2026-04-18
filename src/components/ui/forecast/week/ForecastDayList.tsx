@@ -50,6 +50,7 @@ function ForecastDayList() {
 
       //(min/max reales)
       acc[day].tempMin = Math.min(acc[day].tempMin, cur.main.temp_min);
+      acc[day].tempMax = Math.max(acc[day].tempMax, cur.main.temp_max);
 
       // iconos
       const icon = cur.weather[0].icon;
